@@ -1,0 +1,378 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ========================================
+     PRIMITIVE TOKENS
+     ======================================== */
+
+  /* Primitive Colors - Blue */
+  --primitive-color-blue-50: #f0f9ff;
+  --primitive-color-blue-100: #e0f2fe;
+  --primitive-color-blue-200: #bae6fd;
+  --primitive-color-blue-300: #7dd3fc;
+  --primitive-color-blue-400: #38bdf8;
+  --primitive-color-blue-500: #0ea5e9;
+  --primitive-color-blue-600: #0284c7;
+  --primitive-color-blue-700: #0369a1;
+  --primitive-color-blue-800: #075985;
+  --primitive-color-blue-900: #0c4a6e;
+
+  /* Primitive Colors - Purple */
+  --primitive-color-purple-50: #faf5ff;
+  --primitive-color-purple-100: #f3e8ff;
+  --primitive-color-purple-200: #e9d5ff;
+  --primitive-color-purple-300: #d8b4fe;
+  --primitive-color-purple-400: #c084fc;
+  --primitive-color-purple-500: #a855f7;
+  --primitive-color-purple-600: #9333ea;
+  --primitive-color-purple-700: #7e22ce;
+  --primitive-color-purple-800: #6b21a8;
+  --primitive-color-purple-900: #581c87;
+
+  /* Primitive Colors - Neutral */
+  --primitive-color-neutral-50: #fafafa;
+  --primitive-color-neutral-100: #f5f5f5;
+  --primitive-color-neutral-200: #e5e5e5;
+  --primitive-color-neutral-300: #d4d4d4;
+  --primitive-color-neutral-400: #a3a3a3;
+  --primitive-color-neutral-500: #737373;
+  --primitive-color-neutral-600: #525252;
+  --primitive-color-neutral-700: #404040;
+  --primitive-color-neutral-800: #262626;
+  --primitive-color-neutral-900: #171717;
+
+  /* Primitive Colors - Green */
+  --primitive-color-green-50: #f0fdf4;
+  --primitive-color-green-100: #dcfce7;
+  --primitive-color-green-500: #22c55e;
+  --primitive-color-green-600: #16a34a;
+  --primitive-color-green-700: #15803d;
+
+  /* Primitive Colors - Amber */
+  --primitive-color-amber-50: #fffbeb;
+  --primitive-color-amber-100: #fef3c7;
+  --primitive-color-amber-500: #f59e0b;
+  --primitive-color-amber-600: #d97706;
+  --primitive-color-amber-700: #b45309;
+
+  /* Primitive Colors - Red */
+  --primitive-color-red-50: #fef2f2;
+  --primitive-color-red-100: #fee2e2;
+  --primitive-color-red-500: #ef4444;
+  --primitive-color-red-600: #dc2626;
+  --primitive-color-red-700: #b91c1c;
+
+  /* Primitive Spacing */
+  --primitive-spacing-0: 0;
+  --primitive-spacing-2: 0.125rem;
+  --primitive-spacing-4: 0.25rem;
+  --primitive-spacing-8: 0.5rem;
+  --primitive-spacing-12: 0.75rem;
+  --primitive-spacing-16: 1rem;
+  --primitive-spacing-24: 1.5rem;
+  --primitive-spacing-32: 2rem;
+  --primitive-spacing-40: 2.5rem;
+  --primitive-spacing-48: 3rem;
+  --primitive-spacing-64: 4rem;
+
+  /* Primitive Radius */
+  --primitive-radius-none: 0;
+  --primitive-radius-sm: 0.25rem;
+  --primitive-radius-md: 0.5rem;
+  --primitive-radius-lg: 0.75rem;
+  --primitive-radius-xl: 1rem;
+  --primitive-radius-full: 9999px;
+
+  /* Primitive Typography */
+  --primitive-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --primitive-font-size-xs: 0.75rem;
+  --primitive-font-size-sm: 0.875rem;
+  --primitive-font-size-md: 1rem;
+  --primitive-font-size-lg: 1.125rem;
+  --primitive-font-size-xl: 1.25rem;
+  --primitive-font-size-2xl: 1.5rem;
+  --primitive-font-size-3xl: 1.875rem;
+  --primitive-font-size-4xl: 2.25rem;
+  --primitive-font-size-5xl: 3rem;
+  --primitive-font-weight-regular: 400;
+  --primitive-font-weight-medium: 500;
+  --primitive-font-weight-semibold: 600;
+  --primitive-font-weight-bold: 700;
+  --primitive-line-height-tight: 1.25;
+  --primitive-line-height-normal: 1.5;
+  --primitive-line-height-relaxed: 1.625;
+
+  /* Primitive Elevation */
+  --primitive-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --primitive-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --primitive-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --primitive-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* ========================================
+     SEMANTIC TOKENS (Light Mode)
+     ======================================== */
+
+  /* Background */
+  --semantic-background-default: var(--primitive-color-neutral-50);
+  --semantic-background-inverse: var(--primitive-color-neutral-900);
+
+  /* Surface */
+  --semantic-surface-default: #ffffff;
+  --semantic-surface-elevated: #ffffff;
+
+  /* Text */
+  --semantic-text-primary: var(--primitive-color-neutral-900);
+  --semantic-text-secondary: var(--primitive-color-neutral-600);
+  --semantic-text-tertiary: var(--primitive-color-neutral-500);
+  --semantic-text-inverse: #ffffff;
+  --semantic-text-disabled: var(--primitive-color-neutral-400);
+
+  /* Border */
+  --semantic-border-default: var(--primitive-color-neutral-200);
+  --semantic-border-subtle: var(--primitive-color-neutral-200);
+  --semantic-border-strong: var(--primitive-color-neutral-300);
+  --semantic-border-focus: var(--primitive-color-blue-500);
+
+  /* Action */
+  --semantic-action-primary: var(--primitive-color-blue-500);
+  --semantic-action-primary-hover: var(--primitive-color-blue-600);
+  --semantic-action-secondary: var(--primitive-color-purple-500);
+
+  /* Feedback */
+  --semantic-feedback-success: var(--primitive-color-green-500);
+  --semantic-feedback-warning: var(--primitive-color-amber-500);
+  --semantic-feedback-error: var(--primitive-color-red-500);
+
+  /* Legacy compatibility */
+  --font-size: 16px;
+  --text-xs: var(--primitive-font-size-xs);
+  --text-sm: var(--primitive-font-size-sm);
+  --text-base: var(--primitive-font-size-md);
+  --text-lg: var(--primitive-font-size-lg);
+  --text-xl: var(--primitive-font-size-xl);
+  --text-2xl: var(--primitive-font-size-2xl);
+  --text-3xl: var(--primitive-font-size-3xl);
+  --text-4xl: var(--primitive-font-size-4xl);
+  --text-5xl: var(--primitive-font-size-5xl);
+
+  /* Legacy theme compatibility */
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: var(--color-primary-500);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-secondary-500);
+  --secondary-foreground: #ffffff;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: var(--color-error-500);
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* ========================================
+     SEMANTIC TOKENS (Dark Mode)
+     Primitive tokens remain unchanged
+     ======================================== */
+
+  /* Background */
+  --semantic-background-default: var(--primitive-color-neutral-900);
+  --semantic-background-inverse: var(--primitive-color-neutral-50);
+
+  /* Surface */
+  --semantic-surface-default: var(--primitive-color-neutral-800);
+  --semantic-surface-elevated: var(--primitive-color-neutral-700);
+
+  /* Text */
+  --semantic-text-primary: var(--primitive-color-neutral-50);
+  --semantic-text-secondary: var(--primitive-color-neutral-400);
+  --semantic-text-tertiary: var(--primitive-color-neutral-500);
+  --semantic-text-inverse: var(--primitive-color-neutral-900);
+  --semantic-text-disabled: var(--primitive-color-neutral-600);
+
+  /* Border */
+  --semantic-border-default: var(--primitive-color-neutral-700);
+  --semantic-border-subtle: var(--primitive-color-neutral-700);
+  --semantic-border-strong: var(--primitive-color-neutral-600);
+  --semantic-border-focus: var(--primitive-color-blue-400);
+
+  /* Action */
+  --semantic-action-primary: var(--primitive-color-blue-500);
+  --semantic-action-primary-hover: var(--primitive-color-blue-400);
+  --semantic-action-secondary: var(--primitive-color-purple-500);
+
+  /* Feedback - same in dark mode */
+  --semantic-feedback-success: var(--primitive-color-green-500);
+  --semantic-feedback-warning: var(--primitive-color-amber-500);
+  --semantic-feedback-error: var(--primitive-color-red-500);
+
+  /* Shadows - darker for dark mode */
+  --primitive-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --primitive-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --primitive-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --primitive-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+
+  /* Legacy theme compatibility */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: var(--color-primary-400);
+  --primary-foreground: #000000;
+  --secondary: var(--color-secondary-400);
+  --secondary-foreground: #000000;
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
